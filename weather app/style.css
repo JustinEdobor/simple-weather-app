@@ -1,0 +1,233 @@
+:root {
+  --bg_main: #f0f0f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input {
+  -webkit-appearance: none;
+}
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-size:1rem;
+  background: var(--bg_main);
+  font-family:poppins;
+  padding: 70px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.flex {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding-bottom:30px;
+}
+
+/* HEADER SECTION */
+.heading {
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  padding: 0 0 30px 0;
+}
+.header {
+    width:100%;
+}
+form {
+  margin-top:2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+form input {
+  font-size: 2rem;
+  height: 40px;
+  padding: 5px 5px 10px;
+  border-bottom: 1px solid;
+}
+form button {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 15px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background: #21006d;
+  color:#fff;
+  transition: background 0.3s ease-in-out;
+}
+form .msg {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  max-width: 450px;
+  min-height: 40px;
+}
+
+
+/* CITIES SECTION */
+.cities-section {
+  margin: 70px 0 20px;
+}
+.cities-section .cities {
+  display: grid;
+  grid-gap: 32px 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.cities-section .city {
+  position: relative;
+  padding: 40px 10%;
+  border-radius: 20px;
+  background: #fff;
+  color: #222;
+}
+.cities-section.city::after {
+  content: '';
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: #fff;
+}
+.cities-section figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cities-section .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;);
+}
+.cities-section .city sup {
+  font-size: 0.5em;
+}
+.cities-section .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background: red;
+}
+.cities-section .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+
+/* FOOTER */
+.footer {
+  width:100%;
+  bottom:0;
+  left:0;
+  text-align:center;
+  font-size: 1rem;
+}
+
+.page-footer span {
+  color: ;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    body {
+    padding: 30px;
+    }
+    .cities-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heading,
+    .cities-section .city-temp {
+        font-size: 3rem;
+    }
+    .cities-section {
+        margin-top: 20px;
+    }
+    .header form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    form input {
+        font-size: 1.5rem;
+    }
+    .header form input,
+    .header form button {
+        width: 100%;
+    }
+    .header form button {
+        margin: 20px 0 0 0;
+    }
+    .header form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 10px;
+    }
+    .cities-section .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+    .ajax-section .cities {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* API Key banner
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.api {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.api a {
+  text-decoration: underline;
+}
+
+.api a:hover {
+  text-decoration: none;
+}
